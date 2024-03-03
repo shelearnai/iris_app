@@ -2,13 +2,14 @@
 from sklearn.datasets import load_iris
 import pandas as pd
 import streamlit as st 
-import pickle
+import joblib
 import numpy as np
 
 species = ['setosa', 'versicolor', 'virginica']
 image = ['setosa.jpg', 'versicolor.jpg', 'virginica.jpg']
-with open('model.pkl', 'rb') as f:
+with open('irismodel.joblib', 'rb') as f:
     model = pickle.load(f)
+
 
 
 def main():
